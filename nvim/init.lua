@@ -3,6 +3,7 @@ if vim.g.vscode then
     -- VSCode extension
     require "user.vscode.keymaps"
     require "user.vscode.plugins"
+    require "user.vscode.autocommands"
 else
     -- ordinary Neovim
     require "user.impatient"

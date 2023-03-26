@@ -1,12 +1,11 @@
 local fn = vim.fn
 
--- TODO: make this use vscode commands 
-vim.api.nvim_command([[
-augroup LineNumberManagement
-  autocmd InsertEnter * :set norelativenumber
-  autocmd InsertLeave * :set relativenumber
-augroup END 
-]])
+-- vim.api.nvim_command([[
+-- augroup LineNumberManagementVscode
+--   autocmd InsertEnter * call VSCodeNotify('settings.cycle.lineNumbersOn')
+--   autocmd InsertLeave * call VSCodeNotify('settings.cycle.lineNumbersRelative')
+-- augroup END 
+-- ]])
 
 
 local status_ok, packer = pcall(require, "packer")
