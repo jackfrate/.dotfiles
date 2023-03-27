@@ -33,6 +33,10 @@ antigen apply
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# aliases
+alias vim='nvim'
+alias ll='ls -al'
+
 # loads all of the zsh functions
 # this lazy loads the functions so my terminal isn't slow as shit
 fpath=( ~/.dotfiles/zsh-functions "${fpath[@]}" )

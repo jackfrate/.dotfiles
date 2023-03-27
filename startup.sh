@@ -12,3 +12,5 @@ echo "fi" >> ~/.zshrc
 ln -s ~/.dotfiles/nvim/ ~/.config/nvim
 
 
+# RUN THIS LAST, because it needs to prompt for password
+chsh -s $(which zsh)
