@@ -1,0 +1,3 @@
+function camm() {
+    git commit -a --amend;
+}
