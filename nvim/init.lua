@@ -18,7 +18,7 @@ else
     require "user.treesitter"
     require "user.autopairs"
     require "user.comment"
-    require "user.nvim-tree"
+    -- require "user.nvim-tree"
     require "user.bufferline"
     require "user.lualine"
     require "user.toggleterm"
@@ -29,4 +29,5 @@ else
     require "user.lsp"
     require "user.dap"
     require "user.coc"
+    require "user.neotree"
 end

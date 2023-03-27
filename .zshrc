@@ -25,9 +25,15 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle zsh-users/zsh-autosuggestions
 
+antigen 'zsh-users/zsh-history-substring-search'
 
 # Tell Antigen that you're done.
 antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# loads all of the zsh functions
+# this lazy loads the functions so my terminal isn't slow as shit
+fpath=( ~/.dotfiles/zsh-functions "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
