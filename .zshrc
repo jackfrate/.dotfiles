@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+function zvm_config() {
+  ZVM_INIT_MODE='sourcing'
+}
+
 source ~/.dotfiles/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -18,17 +22,26 @@ antigen bundle command-not-found
 # Theme 
 antigen theme romkatv/powerlevel10k
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
 
 # other plugins
 antigen bundle jeffreytse/zsh-vi-mode
 antigen bundle zsh-users/zsh-autosuggestions
 
-antigen 'zsh-users/zsh-history-substring-search'
+# Syntax highlighting bundle.
+# Needs to be loaded after zsh-vi-mode or it won't work
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# antigen 'zsh-users/zsh-history-substring-search'
+antigen bundle zsh-users/zsh-history-substring-search
 
 # Tell Antigen that you're done.
 antigen apply
+
+# has to be after antigen apply
+# configure your keybindings here... just 2 lines of code!
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
