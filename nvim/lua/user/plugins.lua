@@ -147,6 +147,9 @@ return packer.startup(function(use)
   
   -- Surround 
   use({'machakann/vim-sandwich'})
+  
+  -- VimBeGood
+  use({'ThePrimeagen/vim-be-good'})
  
   -- neo-tree 
   use {
