@@ -156,6 +156,8 @@ return packer.startup(function(use)
         })
     end
 })
+  -- VimBeGood
+  use({'ThePrimeagen/vim-be-good'})
  
   -- neo-tree 
   use {
