@@ -146,7 +146,16 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
   
   -- Surround 
-  use({'machakann/vim-sandwich'})
+  -- use({'machoakann/vim-sandwich'})
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
  
   -- neo-tree 
   use {

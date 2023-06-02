@@ -19,7 +19,16 @@ return packer.startup(function(use)
   -- My plugins here
   use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
   
-  use({'machakann/vim-sandwich'})
+  -- use({'machakann/vim-sandwich'})
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
