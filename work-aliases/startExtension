@@ -1,0 +1,3 @@
+function startExtension() {
+    npx nx run record-mv3:build:local
+}
