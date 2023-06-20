@@ -27,5 +27,14 @@ require("lazy").setup({
         -- Configuration here, or leave empty to use defaults
       })
     end
-  }
+  },
+  -- the comment plugin
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      return {
+        require('Comment').setup()
+      }
+    end
+  },
 })
