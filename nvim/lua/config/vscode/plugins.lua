@@ -32,6 +32,9 @@ require("lazy").setup({
   {
     "numToStr/Comment.nvim",
     config = function()
+      -- local ft = require('Comment.ft').setup()
+      -- ft.yaml = '#%s' 
+      -- ft.json = { '//%s', '/*%s*/' }
       return {
         require('Comment').setup()
       }
