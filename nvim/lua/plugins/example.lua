@@ -230,14 +230,13 @@ return {
     "numToStr/Comment.nvim",
     config = function()
       return {
-        require('Comment').setup()
+        require("Comment").setup(),
       }
-    end
+    end,
   },
 
   -- disable this not great surround that I don't like
   { "echasnovski/mini.surround", enabled = false },
-  { "ggandor/leap.nvim",         enabled = false },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
