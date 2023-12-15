@@ -1,0 +1,3 @@
+function cdp() {
+  cd ~/code/vivid-web-athena
+}
