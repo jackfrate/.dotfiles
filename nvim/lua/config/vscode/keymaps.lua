@@ -96,10 +96,16 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- jump to next error / warning
+vim.keymap.set("n", "<leader>ee", "<cmd>call VSCodeNotify('go-to-next-error.next.error')<CR>")
+vim.keymap.set("n", "<leader>eE", "<cmd>call VSCodeNotify('go-to-next-error.prev.error')<CR>")
+vim.keymap.set("n", "<leader>ew", "<cmd>call VSCodeNotify('go-to-next-error.next.warning')<CR>")
+vim.keymap.set("n", "<leader>eW", "<cmd>call VSCodeNotify('go-to-next-error.prev.warning')<CR>")
+
 -- TODO: put these in normal vim config, harpoon is amazing
 -- harpoon
 vim.keymap.set("n", "<leader>ae", "<cmd>call VSCodeNotify('vscode-harpoon.addEditor')<CR>")
-vim.keymap.set("n", "<leader>e", "<cmd>call VSCodeNotify('vscode-harpoon.editEditors')<CR>")
+vim.keymap.set("n", "<leader>el", "<cmd>call VSCodeNotify('vscode-harpoon.editEditors')<CR>")
 vim.keymap.set("n", "<leader>pe", "<cmd>call VSCodeNotify('vscode-harpoon.editorQuickPick')<CR>")
 
 vim.keymap.set("n", "<leader>1", "<cmd>call VSCodeNotify('vscode-harpoon.gotoEditor1')<CR>")
