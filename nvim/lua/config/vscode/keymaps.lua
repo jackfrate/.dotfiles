@@ -101,6 +101,11 @@ vim.keymap.set("n", "<leader>ee", "<cmd>call VSCodeNotify('go-to-next-error.next
 vim.keymap.set("n", "<leader>eE", "<cmd>call VSCodeNotify('go-to-next-error.prev.error')<CR>")
 vim.keymap.set("n", "<leader>ew", "<cmd>call VSCodeNotify('go-to-next-error.next.warning')<CR>")
 vim.keymap.set("n", "<leader>eW", "<cmd>call VSCodeNotify('go-to-next-error.prev.warning')<CR>")
+-- same but in all files
+vim.keymap.set("n", "<leader>Ee", "<cmd>call VSCodeNotify('go-to-next-error.nextInFiles.error')<CR>")
+vim.keymap.set("n", "<leader>EE", "<cmd>call VSCodeNotify('go-to-next-error.prevInFiles.error')<CR>")
+vim.keymap.set("n", "<leader>Ew", "<cmd>call VSCodeNotify('go-to-next-error.nextInFiles.warning')<CR>")
+vim.keymap.set("n", "<leader>EW", "<cmd>call VSCodeNotify('go-to-next-error.prevInFiles.warning')<CR>")
 
 -- TODO: put these in normal vim config, harpoon is amazing
 -- harpoon
