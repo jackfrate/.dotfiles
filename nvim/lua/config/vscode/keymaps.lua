@@ -96,6 +96,9 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- rename
+vim.keymap.set("n", "<leader>er", "<cmd>call VSCodeNotify('editor.action.rename')<CR>")
+
 -- jump to next error / warning
 vim.keymap.set("n", "<leader>ee", "<cmd>call VSCodeNotify('go-to-next-error.next.error')<CR>")
 vim.keymap.set("n", "<leader>eE", "<cmd>call VSCodeNotify('go-to-next-error.prev.error')<CR>")
