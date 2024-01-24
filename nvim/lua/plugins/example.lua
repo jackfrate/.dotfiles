@@ -22,11 +22,11 @@ return {
   -- },
 
   -- change trouble config
-  -- {
-  --   "folke/trouble.nvim",
-  --   -- opts will be merged with the parent spec
-  --   opts = { use_diagnostic_signs = true },
-  -- },
+  {
+    "folke/trouble.nvim",
+    -- opts will be merged with the parent spec
+    opts = { use_diagnostic_signs = true },
+  },
 
   -- disable trouble
   -- { "folke/trouble.nvim", enabled = false },
@@ -40,15 +40,15 @@ return {
   -- },
 
   -- override nvim-cmp and add cmp-emoji
-  -- {
-  --   "hrsh7th/nvim-cmp",
-  --   dependencies = { "hrsh7th/cmp-emoji" },
-  --   ---@param opts cmp.ConfigSchema
-  --   opts = function(_, opts)
-  --     local cmp = require("cmp")
-  --     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
-  --   end,
-  -- },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = { "hrsh7th/cmp-emoji" },
+    ---@param opts cmp.ConfigSchema
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
+    end,
+  },
 
   -- change some telescope options and a keymap to browse plugin files
   {
@@ -225,7 +225,6 @@ return {
     end,
   },
 
-
   -- harpoon and deps
   -- { import = "nvim-lua/plenary.nvim" },
   -- {
@@ -262,7 +261,7 @@ return {
   },
 
   -- disable this not great surround that I don't like
-  { "echasnovski/mini.surround",     enabled = false },
+  { "echasnovski/mini.surround", enabled = false },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
   {
