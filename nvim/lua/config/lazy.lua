@@ -17,6 +17,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "nvim-lua/plenary.nvim" },
+    { "folke/flash.nvim",                               enabled = false },
     -- { import = "ThePrimeagen/harpoon",                  branch = "harpoon2",       dependencies = "nvim-lua/plenary.nvim", config = true, lazy = false },
     { import = "plugins" },
   },
