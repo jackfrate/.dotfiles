@@ -103,6 +103,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- rename
 vim.keymap.set("n", "<leader>er", "<cmd>call VSCodeNotify('editor.action.rename')<CR>")
+vim.keymap.set("n", "<leader>d", "<cmd>call VSCodeNotify('editor.action.addSelectionToNextFindMatch')<CR>")
+vim.keymap.set("n", "<leader>D", "<cmd>call VSCodeNotify('editor.action.addSelectionToPrevFindMatch')<CR>")
 
 -- jump to next error / warning
 vim.keymap.set("n", "<leader>ee", "<cmd>call VSCodeNotify('go-to-next-error.next.error')<CR>")

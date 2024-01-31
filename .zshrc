@@ -54,3 +54,6 @@ alias ll='ls -al'
 # this lazy loads the functions so my terminal isn't slow as shit
 fpath=( ~/.dotfiles/zsh-functions "${fpath[@]}" )
 autoload -Uz $fpath[1]/*(.:t)
+
+# for tmux
+export TERM=screen-256color
