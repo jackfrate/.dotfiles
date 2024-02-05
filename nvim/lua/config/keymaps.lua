@@ -45,24 +45,19 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
--- Insert --
--- Press jk fast to enter
--- keymap("i", "jk", "<ESC>", opts)
--- keymap("i", "<ESC>", opts)
-
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Plugins --
-
 -- NvimTree
--- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>et", ":Neotree toggle right<CR>", opts)
+-- do nothing with leader e, we use that as a prefix
+keymap("n", "<leader>e", "", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 -- keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 -- keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
@@ -93,21 +88,3 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
--- local harpoon = require("harpoon")
-
--- harpoon:setup()
-
--- vim.keymap.set("n", "<leader>ae", function() harpoon:list():append() end)
--- vim.keymap.set("n", "<leader>pe", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
--- vim.keymap.set("n", "<leader>e", function() harpoon:list():display() end)
-
--- vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
--- vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
--- vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
--- vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
--- vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end)
--- vim.keymap.set("n", "<leader>6", function() harpoon:list():select(6) end)
--- vim.keymap.set("n", "<leader>7", function() harpoon:list():select(7) end)
--- vim.keymap.set("n", "<leader>8", function() harpoon:list():select(8) end)
--- vim.keymap.set("n", "<leader>9", function() harpoon:list():select(9) end)

@@ -14,12 +14,15 @@ return {
   -- { "ellisonleao/gruvbox.nvim" },
 
   -- Configure LazyVim to load gruvbox
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "gruvbox",
-  --   },
-  -- },
+  {
+    "LazyVim/LazyVim",
+    keys = {
+      {
+        "<leader>l",
+        false,
+      },
+    },
+  },
 
   -- change trouble config
   {
@@ -270,6 +273,7 @@ return {
       return {}
     end,
   },
+  { "saadparwaiz1/cmp_luasnip" },
   -- then: setup supertab in cmp
   {
     "hrsh7th/nvim-cmp",
