@@ -81,7 +81,7 @@ keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(v
 
 -- Lsp
 -- not sure about this one, looks like folke already set this up but better
--- keymap("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
 -- center screen when going up and down
 vim.keymap.set("n", "J", "mzJ`z")
