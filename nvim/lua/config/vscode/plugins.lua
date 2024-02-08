@@ -11,8 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
-
 require("lazy").setup({
   -- "folke/which-key.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
@@ -26,18 +24,27 @@ require("lazy").setup({
       require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults
       })
-    end
+    end,
   },
   -- the comment plugin
   {
     "numToStr/Comment.nvim",
     config = function()
       -- local ft = require('Comment.ft').setup()
-      -- ft.yaml = '#%s' 
+      -- ft.yaml = '#%s'
       -- ft.json = { '//%s', '/*%s*/' }
       return {
-        require('Comment').setup()
+        require("Comment").setup(),
       }
-    end
+    end,
+  },
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+    config = function()
+      return {
+        require("vim-visual-multi").setup(),
+      }
+    end,
   },
 })
