@@ -3,6 +3,7 @@ if vim.g.vscode then
   require("config.vscode.keymaps")
   require("config.vscode.autocommands")
   require("config.vscode.plugins")
+  require("config.vscode.options")
 else
   -- bootstrap lazy.nvim, LazyVim and your plugins
   require("config.lazy")
