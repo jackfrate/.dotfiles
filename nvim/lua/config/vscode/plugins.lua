@@ -12,10 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- I think that all this was breaking the plugin somehow
   -- "folke/which-key.nvim",
-  { "folke/neoconf.nvim", cmd = "Neoconf" },
+  -- { "folke/neoconf.nvim", cmd = "Neoconf" },
 
-  "folke/neodev.nvim",
+  -- "folke/neodev.nvim",
 
   {
     "kylechui/nvim-surround",
@@ -38,13 +39,13 @@ require("lazy").setup({
       }
     end,
   },
-  {
-    "mg979/vim-visual-multi",
-    branch = "master",
-    config = function()
-      return {
-        require("vim-visual-multi").setup(),
-      }
-    end,
-  },
+  -- {
+  --   "mg979/vim-visual-multi",
+  --   branch = "master",
+  --   config = function()
+  --     return {
+  --       require("vim-visual-multi").setup(),
+  --     }
+  --   end,
+  -- },
 })
