@@ -22,6 +22,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+
+-- Multi cursor
+-- keymap('n', '<C-d>', '<Nop>')
+-- keymap('n', '<C-d>', 'mciw*<Cmd>nohl<CR>', { remap = true })
+
+
 -- Resize with arrows
 -- keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 -- keymap("n", "<C-Down>", ":resize +2<CR>", opts)

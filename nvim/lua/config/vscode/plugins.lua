@@ -13,10 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- "folke/which-key.nvim",
-  { "folke/neoconf.nvim", cmd = "Neoconf" },
-
-  "folke/neodev.nvim",
-
+  -- { "folke/neoconf.nvim", cmd = "Neoconf" },
+  -- "folke/neodev.nvim",
   {
     "kylechui/nvim-surround",
     -- tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -26,7 +24,6 @@ require("lazy").setup({
       })
     end,
   },
-  -- the comment plugin
   {
     "numToStr/Comment.nvim",
     config = function()
@@ -39,12 +36,9 @@ require("lazy").setup({
     end,
   },
   {
-    "mg979/vim-visual-multi",
-    branch = "master",
-    config = function()
-      return {
-        require("vim-visual-multi").setup(),
-      }
-    end,
+    'vscode-neovim/vscode-multi-cursor.nvim',
+    event = 'VeryLazy',
+    cond = not not vim.g.vscode,
+    opts = {},
   },
 })
