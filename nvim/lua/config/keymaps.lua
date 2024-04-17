@@ -92,3 +92,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- trouble
 keymap("n", "<leader>ct", "<cmd>:TroubleToggle<CR>")
+
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>o', '<Plug>(leap-forward)')
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>O', '<Plug>(leap-backward)')
+-- vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')

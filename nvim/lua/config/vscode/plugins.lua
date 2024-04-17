@@ -41,4 +41,7 @@ require("lazy").setup({
     cond = not not vim.g.vscode,
     opts = {},
   },
+  {
+    'ggandor/leap.nvim'
+  }
 })

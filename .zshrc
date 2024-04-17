@@ -57,3 +57,5 @@ autoload -Uz $fpath[1]/*(.:t)
 
 # for tmux
 export TERM=screen-256color
+
+export ZVM_VI_EDITOR=nvim

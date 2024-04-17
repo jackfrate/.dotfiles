@@ -1,7 +1,8 @@
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
-local opts = { silent = true }
+-- local opts = { silent = true }
+local opts = {}
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -105,6 +106,11 @@ keymap("x", "<leader>\\", "<cmd>call VSCodeNotify('editor.action.blockComment')<
 -- vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- vim.keymap.set("n", "n", "nzzzv")
 -- vim.keymap.set("n", "N", "Nzzzv")
+
+-- Leap
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>o', '<Plug>(leap-forward)')
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>O', '<Plug>(leap-backward)')
+-- vim.keymap.set({'n', 'x', 'o'}, 'gs', '<Plug>(leap-from-window)')
 
 -- rename
 vim.keymap.set("n", "<leader>er", "<cmd>call VSCodeNotify('editor.action.rename')<CR>")
