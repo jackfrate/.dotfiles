@@ -107,6 +107,14 @@ keymap("x", "<leader>\\", "<cmd>call VSCodeNotify('editor.action.blockComment')<
 -- vim.keymap.set("n", "n", "nzzzv")
 -- vim.keymap.set("n", "N", "Nzzzv")
 
+-- vscode multi cursor
+vim.keymap.set('n', '<C-l>', 'mciw*<Cmd>nohl<CR>', { remap = true })
+
+-- local C = require 'vscode-multi-cursor'
+-- vim.keymap.set({ "n", "x", "i" }, "<C-d>", function()
+--   require("vscode-multi-cursor").addSelectionToNextFindMatch()
+-- end)
+
 -- Leap
 vim.keymap.set({ 'n', 'x', 'o' }, '<leader>o', '<Plug>(leap-forward)')
 vim.keymap.set({ 'n', 'x', 'o' }, '<leader>O', '<Plug>(leap-backward)')

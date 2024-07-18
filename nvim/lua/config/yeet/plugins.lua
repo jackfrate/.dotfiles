@@ -25,23 +25,23 @@ require("lazy").setup({
       })
     end,
   },
-  {
-    "numToStr/Comment.nvim",
-    config = function()
-      -- local ft = require('Comment.ft').setup()
-      -- ft.yaml = '#%s'
-      -- ft.json = { '//%s', '/*%s*/' }
-      return {
-        require("Comment").setup(),
-      }
-    end,
-  },
-  {
-    'vscode-neovim/vscode-multi-cursor.nvim',
-    event = 'VeryLazy',
-    cond = not not vim.g.vscode,
-    opts = {},
-  },
+  -- {
+  --   "numToStr/Comment.nvim",
+  --   config = function()
+  --     -- local ft = require('Comment.ft').setup()
+  --     -- ft.yaml = '#%s'
+  --     -- ft.json = { '//%s', '/*%s*/' }
+  --     return {
+  --       require("Comment").setup(),
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   'vscode-neovim/vscode-multi-cursor.nvim',
+  --   event = 'VeryLazy',
+  --   cond = not not vim.g.vscode,
+  --   opts = {},
+  -- },
   {
     'ggandor/leap.nvim'
   }
