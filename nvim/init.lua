@@ -4,6 +4,7 @@ if vim.g.vscode then
   require("config.yeet.autocommands")
   require("config.yeet.plugins")
   require("config.yeet.options")
+  require("config.yeet.vscode-lazy")
 else
   -- bootstrap lazy.nvim, LazyVim and your plugins
   require("config.lazy")
