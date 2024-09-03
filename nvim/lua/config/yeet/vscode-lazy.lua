@@ -9,7 +9,7 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 vim.opt.ignorecase = true
 
-require("nvim.lua.config.yeet.vscode-lazy").setup({
+require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
