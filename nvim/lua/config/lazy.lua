@@ -7,6 +7,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+if vim.g.vscode then
+  return {}
+end
+
 require("lazy").setup({
   keys = {
     {
