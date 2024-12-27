@@ -49,6 +49,7 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 # aliases
 alias vim='nvim'
 alias ll='ls -al'
+alias nvim-vscode='NVIM_APPNAME="nvim-vscode" nvim'
 
 # loads all of the zsh functions
 # this lazy loads the functions so my terminal isn't slow as shit
