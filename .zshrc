@@ -37,6 +37,8 @@ antigen bundle zsh-users/zsh-history-substring-search
 # Tell Antigen that you're done.
 antigen apply
 
+# disable weird command output
+DISABLE_AUTO_TITLE="true"
 # has to be after antigen apply
 # configure your keybindings here... just 2 lines of code!
 bindkey '^[[A' history-substring-search-up
